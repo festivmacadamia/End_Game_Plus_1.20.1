@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "endgameplus:enderite_upgrade_smithing_template"
+    },
+    "F": {
+      "item": "minecraft:end_stone"
+    },
+    "S": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "SDS",
+    "SFS",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "endgameplus:enderite_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

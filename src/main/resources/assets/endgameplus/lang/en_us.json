@@ -24,5 +24,11 @@
     "block.endgameplus.raw_enderite": "Raw Enderite",
     "block.endgameplus.end_diamond_ore": "End Diamond Ore",
 
+    "item.endgameplus.smithing_template.enderite_upgrade": "Enderite Upgrade",
+    "item.endgameplus.smithing_template.enderite_upgrade.ingredients": "Enderite Ingot",
+    "item.endgameplus.smithing_template.enderite_upgrade.additions_slot_description": "Add Enderite Ingot",
+
+    "item.endgameplus.metal_detector.tooltip": "Finds underground valuables",
+
     "creativetab.egp_tab": "End Game Plus"
 }

@@ -33,7 +33,7 @@ public class MetalDetectorItem extends Item{
 
     
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.literal("Finds underground valuables").withStyle(ChatFormatting.GRAY));
+        pTooltipComponents.add(Component.translatable("item.endgameplus.metal_detector.tooltip").withStyle(ChatFormatting.GRAY));
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
     
