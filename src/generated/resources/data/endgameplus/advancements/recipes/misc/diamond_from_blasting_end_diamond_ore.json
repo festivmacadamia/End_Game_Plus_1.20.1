@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_diamond_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endgameplus:end_diamond_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "endgameplus:diamond_from_blasting_end_diamond_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_end_diamond_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "endgameplus:diamond_from_blasting_end_diamond_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

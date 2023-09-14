@@ -1,0 +1,6 @@
+// 1.20.1	2023-09-13T21:02:46.244717	Global Loot Modifiers : endgameplus
+e4505b46987bf3f2415562a909b13247793768a2 data/endgameplus/loot_modifiers/enderite_ingot_from_end_city_chest.json
+2a99e84d70a7e1ed943879972d776eb3d2a43f45 data/endgameplus/loot_modifiers/enderite_scrap_from_end_city_chest.json
+5b7ca1dea67ce2d4d9fc4070d97987319566e9fb data/endgameplus/loot_modifiers/enderite_smithing_template_from_end_city_chest.json
+5e8318b1dcbce86a54ff4e8f34230d54dc0210c0 data/endgameplus/loot_modifiers/metal_detector_from_mineshaft_chest.json
+89d2056ce87da02816a05f0880f1ef07e5b9f7de data/forge/loot_modifiers/global_loot_modifiers.json

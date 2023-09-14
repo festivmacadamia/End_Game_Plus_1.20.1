@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:cooked_beef"
+    },
+    "S": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SDS",
+    "SSS"
+  ],
+  "result": {
+    "item": "endgameplus:golden_steak"
+  },
+  "show_notification": true
+}

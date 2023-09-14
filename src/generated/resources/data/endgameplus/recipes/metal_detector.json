@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:nether_star"
+    },
+    "F": {
+      "item": "endgameplus:enderite_ingot"
+    },
+    "S": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "  S",
+    " D ",
+    "F  "
+  ],
+  "result": {
+    "item": "endgameplus:metal_detector"
+  },
+  "show_notification": true
+}

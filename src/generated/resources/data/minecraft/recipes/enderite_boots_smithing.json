@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "endgameplus:enderite_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "endgameplus:enderite_boots"
+  },
+  "template": {
+    "item": "endgameplus:enderite_upgrade_smithing_template"
+  }
+}

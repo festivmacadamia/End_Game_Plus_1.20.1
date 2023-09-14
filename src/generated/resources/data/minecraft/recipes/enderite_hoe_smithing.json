@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "endgameplus:enderite_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_hoe"
+  },
+  "result": {
+    "item": "endgameplus:enderite_hoe"
+  },
+  "template": {
+    "item": "endgameplus:enderite_upgrade_smithing_template"
+  }
+}

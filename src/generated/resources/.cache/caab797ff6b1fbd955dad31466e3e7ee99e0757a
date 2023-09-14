@@ -1,0 +1,5 @@
+// 1.20.1	2023-09-04T17:00:51.143708	Tags for minecraft:block mod id endgameplus
+de84fbf8e8aacd48324dfb1935c3d1ff46eadf33 data/endgameplus/tags/blocks/metal_detector_valuables.json
+03509397050082bc848345746c1af2aac8465bf1 data/minecraft/tags/blocks/mineable/pickaxe.json
+9c3bd833d40639849a7ee2b4dc578db600c6338a data/minecraft/tags/blocks/needs_diamond_tool.json
+dd297e0c2140895bf9edb276505fe1879a13c7f9 data/minecraft/tags/blocks/needs_iron_tool.json

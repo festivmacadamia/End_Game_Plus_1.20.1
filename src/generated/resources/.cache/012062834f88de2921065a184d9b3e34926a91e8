@@ -1,0 +1,10 @@
+// 1.20.1	2023-09-04T17:00:51.146146	Block States: endgameplus
+768eab40d354a429133ad25742b66f2748c3f560 assets/endgameplus/blockstates/end_diamond_ore.json
+43c080b133f1a73536e90c7ad709eecdeb6ac4d9 assets/endgameplus/blockstates/enderite_block.json
+2cf343e64ae1d9bb61acb9c6db07c298f479a9ee assets/endgameplus/blockstates/raw_enderite.json
+d6f7cbb7d16a06869a61220cf3a05310078d6fc2 assets/endgameplus/models/block/end_diamond_ore.json
+94b459226f7320b20bbb37c9f7b1a84539028dee assets/endgameplus/models/block/enderite_block.json
+49ff850e608d0d7ed615ad09369eb5f4762efd2c assets/endgameplus/models/block/raw_enderite.json
+28a1ed41fce6308e356fbc35cccc2bf4757890d7 assets/endgameplus/models/item/end_diamond_ore.json
+f6941c565202c21063bebeb22db5648dd5fcdf30 assets/endgameplus/models/item/enderite_block.json
+138b4e1cdf2cdd59e8e4a05dc01566a0be47e6bb assets/endgameplus/models/item/raw_enderite.json

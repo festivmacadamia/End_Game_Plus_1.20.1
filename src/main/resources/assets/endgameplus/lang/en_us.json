@@ -1,0 +1,28 @@
+{
+    "item.endgameplus.enderite_ingot": "Enderite Ingot",
+    "item.endgameplus.enderite_scrap": "Enderite Scrap",
+    "item.endgameplus.enderite_upgrade_smithing_template": "Smithing Template",
+
+    "item.endgameplus.golden_steak": "Golden Steak",
+
+    "item.endgameplus.metal_detector": "Metal Detector",
+
+    
+    "item.endgameplus.enderite_sword": "Enderite Sword",
+    "item.endgameplus.enderite_shovel": "Enderite Shovel",
+    "item.endgameplus.enderite_pickaxe": "Enderite Pickaxe",
+    "item.endgameplus.enderite_axe": "Enderite Axe",
+    "item.endgameplus.enderite_hoe": "Enderite Hoe",
+
+    "item.endgameplus.enderite_helmet": "Enderite Helmet",
+    "item.endgameplus.enderite_chestplate": "Enderite Chestplate",
+    "item.endgameplus.enderite_leggings": "Enderite Leggings",
+    "item.endgameplus.enderite_boots": "Enderite Boots",
+
+
+    "block.endgameplus.enderite_block": "Enderite Block",
+    "block.endgameplus.raw_enderite": "Raw Enderite",
+    "block.endgameplus.end_diamond_ore": "End Diamond Ore",
+
+    "creativetab.egp_tab": "End Game Plus"
+}
