@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider{
         simpleItem(ModItems.GOLDEN_STEAK);
 
         spawnEggItem(ModItems.MUNCHER_SPAWN_EGG);
+        spawnEggItem(ModItems.CAPYBARA_SPAWN_EGG);
         
         simpleItem(ModItems.METAL_DETECTOR);
 

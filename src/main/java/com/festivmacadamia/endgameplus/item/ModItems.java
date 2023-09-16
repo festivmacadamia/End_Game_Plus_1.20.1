@@ -6,6 +6,7 @@ import com.festivmacadamia.endgameplus.item.custom.MetalDetectorItem;
 import com.festivmacadamia.endgameplus.item.custom.ModArmorItem;
 
 import com.festivmacadamia.endgameplus.item.custom.ModSmithingTemplateItem;
+import com.festivmacadamia.endgameplus.util.ColorSwapper;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -54,8 +55,11 @@ public class ModItems {
         ()  -> new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> ENDERITE_BOOTS = ITEMS.register("enderite_boots", 
         ()  -> new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
     public static final RegistryObject<ForgeSpawnEggItem> MUNCHER_SPAWN_EGG = ITEMS.register("muncher_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.MUNCHER, 16711549, 7614776, new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.MUNCHER, new ColorSwapper("#c7bb14").getMcColor(), new ColorSwapper("#4d1b05").getMcColor(), new Item.Properties()));
+    public static final RegistryObject<ForgeSpawnEggItem> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CAPYBARA, new ColorSwapper("#805332").getMcColor(), new ColorSwapper("#bf8f6b").getMcColor(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

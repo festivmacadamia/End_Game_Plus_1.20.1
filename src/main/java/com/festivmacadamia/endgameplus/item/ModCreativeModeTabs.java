@@ -44,6 +44,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.END_DIAMOND_ORE.get());
 
                         pOutput.accept(ModItems.MUNCHER_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.CAPYBARA_SPAWN_EGG.get());
                     })
                     .build());
 

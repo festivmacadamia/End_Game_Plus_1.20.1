@@ -3,23 +3,23 @@
 	"animations": {
 		"animation.muncher.walk": {
 			"loop": true,
-			"animation_length": 2,
+			"animation_length": 0.5,
 			"bones": {
 				"back": {
 					"rotation": {
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.5": {
+						"0.125": {
 							"vector": [-30, 0, 0]
 						},
-						"1.0": {
+						"0.25": {
 							"vector": [0, 0, 0]
 						},
-						"1.5": {
+						"0.375": {
 							"vector": [30, 0, 0]
 						},
-						"2.0": {
+						"0.5": {
 							"vector": [0, 0, 0]
 						}
 					}
@@ -29,19 +29,19 @@
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.5": {
+						"0.125": {
 							"vector": [30, 0, 0],
 							"easing": "linear"
 						},
-						"1.0": {
+						"0.25": {
 							"vector": [0, 0, 0],
 							"easing": "linear"
 						},
-						"1.5": {
+						"0.375": {
 							"vector": [-30, 0, 0],
 							"easing": "linear"
 						},
-						"2.0": {
+						"0.5": {
 							"vector": [0, 0, 0],
 							"easing": "linear"
 						}
@@ -52,16 +52,16 @@
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.5": {
+						"0.125": {
 							"vector": [-30, 0, 0]
 						},
-						"1.0": {
+						"0.25": {
 							"vector": [0, 0, 0]
 						},
-						"1.5": {
+						"0.375": {
 							"vector": [30, 0, 0]
 						},
-						"2.0": {
+						"0.5": {
 							"vector": [0, 0, 0]
 						}
 					}
@@ -71,16 +71,16 @@
 						"0.0": {
 							"vector": [0, 0, 0]
 						},
-						"0.5": {
+						"0.125": {
 							"vector": [30, 0, 0]
 						},
-						"1.0": {
+						"0.25": {
 							"vector": [0, 0, 0]
 						},
-						"1.5": {
+						"0.375": {
 							"vector": [-30, 0, 0]
 						},
-						"2.0": {
+						"0.5": {
 							"vector": [0, 0, 0]
 						}
 					}
@@ -121,7 +121,30 @@
 			}
 		},
 		"animation.muncher.idle": {
-			"loop": true
+			"loop": true,
+			"animation_length": 0.20833,
+			"bones": {
+				"back": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"front": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"front2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"back2": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2

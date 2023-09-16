@@ -2,6 +2,7 @@ package com.festivmacadamia.endgameplus;
 
 import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.entity.ModEntities;
+import com.festivmacadamia.endgameplus.entity.client.CapybaraRenderer;
 import com.festivmacadamia.endgameplus.entity.client.MuncherRenderer;
 import com.festivmacadamia.endgameplus.item.ModCreativeModeTabs;
 import com.festivmacadamia.endgameplus.item.ModItems;
@@ -63,6 +64,7 @@ public class EndGamePlus{
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.MUNCHER.get(), MuncherRenderer::new);
+            EntityRenderers.register(ModEntities.CAPYBARA.get(), CapybaraRenderer::new);
         }
     }
 }
