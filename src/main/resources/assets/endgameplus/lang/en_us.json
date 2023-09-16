@@ -30,5 +30,10 @@
 
     "item.endgameplus.metal_detector.tooltip": "Finds underground valuables",
 
+    "entity.endgameplus.capybara": "Capybara",
+    "item.endgameplus.capybara_spawn_egg": "Capybara Spawn Egg",
+    "entity.endgameplus.muncher": "Muncher",
+    "item.endgameplus.muncher_spawn_egg": "Muncher Spawn Egg",
+
     "creativetab.egp_tab": "End Game Plus"
 }

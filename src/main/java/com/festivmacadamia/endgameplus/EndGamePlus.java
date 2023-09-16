@@ -1,10 +1,13 @@
 package com.festivmacadamia.endgameplus;
 
 import com.festivmacadamia.endgameplus.block.ModBlocks;
+import com.festivmacadamia.endgameplus.entity.ModEntities;
+import com.festivmacadamia.endgameplus.entity.client.MuncherRenderer;
 import com.festivmacadamia.endgameplus.item.ModCreativeModeTabs;
 import com.festivmacadamia.endgameplus.item.ModItems;
 import com.festivmacadamia.endgameplus.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,6 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 
 @Mod(EndGamePlus.MOD_ID)
@@ -30,6 +34,8 @@ public class EndGamePlus{
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModEntities.register(modEventBus);
+        GeckoLib.initialize();
  
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,10 +59,10 @@ public class EndGamePlus{
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents{
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event){
-            
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.MUNCHER.get(), MuncherRenderer::new);
         }
     }
 }

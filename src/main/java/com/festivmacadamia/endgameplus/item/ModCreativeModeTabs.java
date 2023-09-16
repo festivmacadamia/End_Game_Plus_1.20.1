@@ -42,6 +42,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ENDERITE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_ENDERITE.get());
                         pOutput.accept(ModBlocks.END_DIAMOND_ORE.get());
+
+                        pOutput.accept(ModItems.MUNCHER_SPAWN_EGG.get());
                     })
                     .build());
 

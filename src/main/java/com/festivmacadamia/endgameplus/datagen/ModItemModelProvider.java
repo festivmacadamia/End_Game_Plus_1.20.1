@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -48,6 +49,8 @@ public class ModItemModelProvider extends ItemModelProvider{
         simpleItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
 
         simpleItem(ModItems.GOLDEN_STEAK);
+
+        spawnEggItem(ModItems.MUNCHER_SPAWN_EGG);
         
         simpleItem(ModItems.METAL_DETECTOR);
 
@@ -147,5 +150,9 @@ public class ModItemModelProvider extends ItemModelProvider{
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(EndGamePlus.MOD_ID,"item/" + item.getId().getPath()));
     }
-    
+
+    private ItemModelBuilder spawnEggItem(RegistryObject<ForgeSpawnEggItem> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/template_spawn_egg"));
+    }
 }

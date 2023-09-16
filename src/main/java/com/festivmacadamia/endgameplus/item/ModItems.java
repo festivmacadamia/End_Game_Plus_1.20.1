@@ -1,11 +1,13 @@
 package com.festivmacadamia.endgameplus.item;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
+import com.festivmacadamia.endgameplus.entity.ModEntities;
 import com.festivmacadamia.endgameplus.item.custom.MetalDetectorItem;
 import com.festivmacadamia.endgameplus.item.custom.ModArmorItem;
 
 import com.festivmacadamia.endgameplus.item.custom.ModSmithingTemplateItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -52,7 +54,8 @@ public class ModItems {
         ()  -> new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> ENDERITE_BOOTS = ITEMS.register("enderite_boots", 
         ()  -> new ArmorItem(ModArmorMaterials.ENDERITE, ArmorItem.Type.BOOTS, new Item.Properties()));
-
+    public static final RegistryObject<ForgeSpawnEggItem> MUNCHER_SPAWN_EGG = ITEMS.register("muncher_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.MUNCHER, 16711549, 7614776, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
