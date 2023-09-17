@@ -59,6 +59,7 @@ public class MuncherEntity extends Animal implements GeoEntity {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this,"controller",0,this::predicate));
+        controllerRegistrar.add(new AnimationController<>(this,"attackController",0,this::attackPredicate));
     }
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
@@ -66,17 +67,17 @@ public class MuncherEntity extends Animal implements GeoEntity {
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         }
-
         tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
     private <T extends GeoAnimatable> PlayState attackPredicate(AnimationState<T> tAnimationState) {
-        if(false){
+        if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)){ //lpease
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.attack", Animation.LoopType.PLAY_ONCE));
+            tAnimationState.getController().forceAnimationReset();
+            swinging=false;
             return PlayState.CONTINUE;
         }
-        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 

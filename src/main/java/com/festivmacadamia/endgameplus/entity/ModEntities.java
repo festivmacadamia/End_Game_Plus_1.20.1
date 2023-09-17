@@ -17,12 +17,12 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<MuncherEntity>> MUNCHER = ENTITY_TYPE.register("muncher",
             () -> EntityType.Builder.of(MuncherEntity::new, MobCategory.CREATURE)
-                    .sized(1.0f,1.0f)
+                    .sized(0.9f,0.9f)
                     .build(new ResourceLocation(EndGamePlus.MOD_ID,"muncher").toString())
     );
     public static final RegistryObject<EntityType<CapybaraEntity>> CAPYBARA = ENTITY_TYPE.register("capybara",
             () -> EntityType.Builder.of(CapybaraEntity::new, MobCategory.CREATURE)
-                    .sized(1.0f,1.0f)
+                    .sized(1.2f,1.4f)
                     .build(new ResourceLocation(EndGamePlus.MOD_ID,"capybara").toString())
     );
 

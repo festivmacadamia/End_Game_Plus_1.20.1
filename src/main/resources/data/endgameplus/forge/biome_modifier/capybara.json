@@ -3,7 +3,7 @@
   "biomes": "#minecraft:is_overworld",
   "spawners": {
     "type": "endgameplus:capybara",
-    "weight": 75,
+    "weight": 25,
     "minCount": 2,
     "maxCount": 8
   }

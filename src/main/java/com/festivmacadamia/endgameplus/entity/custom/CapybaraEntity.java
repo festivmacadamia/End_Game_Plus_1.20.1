@@ -39,8 +39,8 @@ public class CapybaraEntity extends Animal implements GeoEntity {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 3.5D));
-        this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, MuncherEntity.class, 15.0F, 1.5D, 3.5D));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0D));
+        this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, MuncherEntity.class, 25.0F, 1.25D, 2.0D));
         this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(4, new TemptGoal(this, 1.25D, Ingredient.of(Items.CARROT), false));
         this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.25D));
@@ -58,7 +58,7 @@ public class CapybaraEntity extends Animal implements GeoEntity {
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
         controllerRegistrar.add(new AnimationController<>(this,"controller",0,this::predicate));
-        controllerRegistrar.add(new AnimationController<>(this,"controller",0,this::wigglePredicate));
+        controllerRegistrar.add(new AnimationController<>(this,"wiggleController",0,this::wigglePredicate));
     }
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
@@ -70,11 +70,12 @@ public class CapybaraEntity extends Animal implements GeoEntity {
         return PlayState.CONTINUE;
     }
     private <T extends GeoAnimatable> PlayState wigglePredicate(AnimationState<T> tAnimationState) {
-        if(!tAnimationState.isMoving()){
+        int rand = (int)(Math.random()*5000);
+        if(rand<5){
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.capybara.ear_wiggle", Animation.LoopType.PLAY_ONCE));
+            tAnimationState.getController().forceAnimationReset();
             return PlayState.CONTINUE;
         }
-        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.capybara.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
