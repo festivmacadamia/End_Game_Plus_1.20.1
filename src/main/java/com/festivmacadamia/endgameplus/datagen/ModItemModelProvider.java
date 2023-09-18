@@ -3,6 +3,7 @@ package com.festivmacadamia.endgameplus.datagen;
 import java.util.LinkedHashMap;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
+import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.item.ModItems;
 
 import net.minecraft.data.PackOutput;
@@ -49,6 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider{
         simpleItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
 
         simpleItem(ModItems.GOLDEN_STEAK);
+        simpleItem(ModItems.STRAWBERRY);
 
         spawnEggItem(ModItems.MUNCHER_SPAWN_EGG);
         spawnEggItem(ModItems.CAPYBARA_SPAWN_EGG);
@@ -65,10 +67,21 @@ public class ModItemModelProvider extends ItemModelProvider{
         trimmedArmorItem(ModItems.ENDERITE_CHESTPLATE);
         trimmedArmorItem(ModItems.ENDERITE_LEGGINGS);
         trimmedArmorItem(ModItems.ENDERITE_BOOTS);
+
+        saplingItem(ModBlocks.LAVENDER_SAPLING);
+
+        evenSimplerBlockItem(ModBlocks.LAVENDER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.LAVENDER_SLAB);
+        evenSimplerBlockItem(ModBlocks.LAVENDER_PRESSURE_PLATE);
+        evenSimplerBlockItem(ModBlocks.LAVENDER_FENCE_GATE);
+        simpleBlockItem(ModBlocks.LAVENDER_DOOR);
+        trapdoorItem(ModBlocks.LAVENDER_TRAPDOOR);
+        buttonItem(ModBlocks.LAVENDER_BUTTON, ModBlocks.LAVENDER_PLANKS);
+        fenceItem(ModBlocks.LAVENDER_FENCE, ModBlocks.LAVENDER_PLANKS);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = EndGamePlus.MOD_ID; // Change this to your mod id
+        final String MOD_ID = EndGamePlus.MOD_ID;
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.entrySet().forEach(entry -> {
@@ -114,7 +127,11 @@ public class ModItemModelProvider extends ItemModelProvider{
         }
     }
 
-
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(EndGamePlus.MOD_ID,"item/" + item.getId().getPath()));
+    }
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(EndGamePlus.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
@@ -156,4 +173,11 @@ public class ModItemModelProvider extends ItemModelProvider{
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/template_spawn_egg"));
     }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(EndGamePlus.MOD_ID,"block/" + block.getId().getPath()));
+    }
+
 }

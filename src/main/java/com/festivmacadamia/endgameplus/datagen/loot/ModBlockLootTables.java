@@ -26,9 +26,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_ENDERITE.get());
         this.dropSelf(ModBlocks.ENDERITE_BLOCK.get());
 
+        this.dropSelf(ModBlocks.LAVENDER_WOOD.get());
+        this.dropSelf(ModBlocks.LAVENDER_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LAVENDER_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LAVENDER_LOG.get());
+        this.dropSelf(ModBlocks.LAVENDER_PLANKS.get());
+        this.dropSelf(ModBlocks.LAVENDER_SAPLING.get());
+
+        this.add(ModBlocks.LAVENDER_LEAVES.get(),(block) ->
+                createLeavesDrops(block, ModBlocks.LAVENDER_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+
         this.add(ModBlocks.END_DIAMOND_ORE.get(),
                 block -> createDiamondLikeOreDrops(ModBlocks.END_DIAMOND_ORE.get(), Items.DIAMOND));
 
+        this.dropSelf(ModBlocks.LAVENDER_STAIRS.get());
+        this.dropSelf(ModBlocks.LAVENDER_BUTTON.get());
+        this.dropSelf(ModBlocks.LAVENDER_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LAVENDER_FENCE.get());
+        this.dropSelf(ModBlocks.LAVENDER_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.LAVENDER_TRAPDOOR.get());
+
+        this.add(ModBlocks.LAVENDER_DOOR.get(),
+                block -> createDoorTable(ModBlocks.LAVENDER_DOOR.get()));
+        this.add(ModBlocks.LAVENDER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LAVENDER_SLAB .get()));
     }
 
     protected LootTable.Builder createDiamondLikeOreDrops(Block pBlock, Item item) {

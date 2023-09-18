@@ -1,2 +1,6 @@
-// 1.20.1	2023-09-05T15:24:24.880125	Tags for minecraft:item mod id endgameplus
+// 1.20.1	2023-09-17T20:08:57.755057	Tags for minecraft:item mod id endgameplus
+6651b33eaea4ffa8a0901da7f8be8561e083703a data/endgameplus/tags/items/lavender_logs_item.json
+67b5d8cd50616d70eb90c7d8e3ae80145034c07c data/minecraft/tags/items/logs.json
+67b5d8cd50616d70eb90c7d8e3ae80145034c07c data/minecraft/tags/items/logs_that_burn.json
+6c0f1b81d8eefa4cb3ff707c79181f65a0dcf27d data/minecraft/tags/items/planks.json
 dfe181fc7792454c92254df0c1d4eca44930d64b data/minecraft/tags/items/trimmable_armor.json

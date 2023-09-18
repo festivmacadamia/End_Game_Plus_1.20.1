@@ -3,9 +3,11 @@ package com.festivmacadamia.endgameplus.datagen;
 import com.festivmacadamia.endgameplus.EndGamePlus;
 import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.item.ModItems;
+import com.festivmacadamia.endgameplus.util.ModTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -83,6 +85,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         enderiteSmithing(pWriter, Items.DIAMOND_PICKAXE, RecipeCategory.TOOLS, ModItems.ENDERITE_PICKAXE.get());
         enderiteSmithing(pWriter, Items.DIAMOND_HOE, RecipeCategory.TOOLS, ModItems.ENDERITE_HOE.get());
         enderiteSmithing(pWriter, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS, ModItems.ENDERITE_SHOVEL.get());
+
+        planksFromLog(pWriter,ModBlocks.LAVENDER_PLANKS.get().asItem(), ModTags.Items.LAVENDER_LOGS_ITEM,4);
         
     }
 
@@ -100,21 +104,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> p_249580_, RecipeCategory p_251203_, ItemLike p_251689_, RecipeCategory p_251376_, ItemLike p_248771_) {
-        nineBlockStorageRecipes(p_249580_, p_251203_, p_251689_, p_251376_, p_248771_, getSimpleRecipeName(p_248771_), (String)null, getSimpleRecipeName(p_251689_), (String)null);
-    }
-
-    protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> p_250423_, RecipeCategory p_250083_, ItemLike p_250042_,
-                                                  RecipeCategory p_248977_, ItemLike p_251911_, String p_250475_, @Nullable String p_248641_,
-                                                  String p_252237_, @Nullable String p_250414_) {
-        ShapelessRecipeBuilder.shapeless(p_250083_, p_250042_, 9).requires(p_251911_).group(p_250414_).unlockedBy(getHasName(p_251911_), has(p_251911_))
-                .save(p_250423_, new ResourceLocation(EndGamePlus.MOD_ID, p_252237_));
-        ShapedRecipeBuilder.shaped(p_248977_, p_251911_).define('#', p_250042_).pattern("###").pattern("###").pattern("###").group(p_248641_)
-                .unlockedBy(getHasName(p_250042_), has(p_250042_)).save(p_250423_, new ResourceLocation(EndGamePlus.MOD_ID, p_250475_));
-    }
-
     protected static void enderiteSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), Ingredient.of(pIngredientItem), Ingredient.of(ModItems.ENDERITE_INGOT.get()), pCategory, pResultItem).unlocks("has_enderite_ingot", has(ModItems.ENDERITE_INGOT.get())).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
      }
+
+    protected static void planksFromLog(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pPlanks, TagKey<Item> pLogs, int pResultCount) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pPlanks, pResultCount).requires(pLogs).group("planks").unlockedBy("has_log", has(pLogs)).save(pFinishedRecipeConsumer);
+    }
 
 }

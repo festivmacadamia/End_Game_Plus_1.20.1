@@ -1,4 +1,5 @@
-// 1.20.1	2023-09-14T10:08:08.58822	Recipes
+// 1.20.1	2023-09-17T20:05:00.022523	Recipes
+b54e3d9782dab3ec222af5f0191004941406a051 data/endgameplus/advancements/recipes/building_blocks/lavender_planks.json
 aa5bd83d1596b7425df6d55268e8643200d20eec data/endgameplus/advancements/recipes/misc/diamond_from_blasting_end_diamond_ore.json
 4d29d391a6b0d8430e83c2a3142d4b1a1f38c74e data/endgameplus/advancements/recipes/misc/diamond_from_smelting_end_diamond_ore.json
 b3ae2e8f8ff21338927bfa6f23c149af4ff1bbb2 data/endgameplus/advancements/recipes/misc/enderite_block.json
@@ -14,6 +15,7 @@ c39b1f3cd34c701285b115f4c7074e23f582eed1 data/endgameplus/recipes/diamond_from_s
 6f48cb5ecaa12318841865f7b6fffada6f1642cf data/endgameplus/recipes/enderite_scrap_from_smelting_raw_enderite.json
 3e42744a741eb7f97e4e5879f1e4b9098d6f0556 data/endgameplus/recipes/enderite_upgrade_smithing_template.json
 dc7b055ce828cad8b8c3bf46e9233b0f070509b8 data/endgameplus/recipes/golden_steak.json
+1c5c7dd65e3ab0bc918d38844b19f60671377bb6 data/endgameplus/recipes/lavender_planks.json
 6b994fb4bd56a94e425b1f665d51eb672e482bc8 data/endgameplus/recipes/metal_detector.json
 5dba971e1a69bae91b4d1fa53a2edd28a0290e87 data/minecraft/advancements/recipes/combat/enderite_boots_smithing.json
 88ddd1a27b1f9ca3553023b518674159ebde67e8 data/minecraft/advancements/recipes/combat/enderite_chestplate_smithing.json

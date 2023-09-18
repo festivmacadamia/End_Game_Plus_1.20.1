@@ -1,12 +1,11 @@
 {
     "item.endgameplus.enderite_ingot": "Enderite Ingot",
     "item.endgameplus.enderite_scrap": "Enderite Scrap",
-    "item.endgameplus.enderite_upgrade_smithing_template": "Smithing Template",
 
     "item.endgameplus.golden_steak": "Golden Steak",
+    "item.endgameplus.strawberry": "Strawberry",
 
     "item.endgameplus.metal_detector": "Metal Detector",
-
     
     "item.endgameplus.enderite_sword": "Enderite Sword",
     "item.endgameplus.enderite_shovel": "Enderite Shovel",
@@ -24,6 +23,7 @@
     "block.endgameplus.raw_enderite": "Lost Dross",
     "block.endgameplus.end_diamond_ore": "End Diamond Ore",
 
+    "item.endgameplus.enderite_upgrade_smithing_template": "Smithing Template",
     "item.endgameplus.smithing_template.enderite_upgrade": "Enderite Upgrade",
     "item.endgameplus.smithing_template.enderite_upgrade.ingredients": "Enderite Ingot",
     "item.endgameplus.smithing_template.enderite_upgrade.additions_slot_description": "Add Enderite Ingot",
@@ -34,6 +34,23 @@
     "item.endgameplus.capybara_spawn_egg": "Capybara Spawn Egg",
     "entity.endgameplus.muncher": "Muncher",
     "item.endgameplus.muncher_spawn_egg": "Muncher Spawn Egg",
+
+    "block.endgameplus.lavender_log": "Lavender Log",
+    "block.endgameplus.stripped_lavender_log": "Stripped Lavender Log",
+    "block.endgameplus.lavender_wood": "Lavender Wood",
+    "block.endgameplus.stripped_lavender_wood": "Stripped Lavender Wood",
+    "block.endgameplus.lavender_planks": "Lavender Planks",
+    "block.endgameplus.lavender_leaves": "Lavender Leaves",
+    "block.endgameplus.lavender_sapling": "Lavender Sapling",
+
+    "block.endgameplus.lavender_stairs": "Lavender Stairs",
+    "block.endgameplus.lavender_slab": "Lavender Slab",
+    "block.endgameplus.lavender_button": "Lavender Button",
+    "block.endgameplus.lavender_pressure_plate": "Lavender Pressure Plate",
+    "block.endgameplus.lavender_fence": "Lavender Fence",
+    "block.endgameplus.lavender_fence_gate": "Lavender Fence Gate",
+    "block.endgameplus.lavender_door": "Lavender Door",
+    "block.endgameplus.lavender_trapdoor": "Lavender Trapdoor",
 
     "creativetab.egp_tab": "End Game Plus"
 }

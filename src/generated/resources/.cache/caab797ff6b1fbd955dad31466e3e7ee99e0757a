@@ -1,5 +1,20 @@
-// 1.20.1	2023-09-04T17:00:51.143708	Tags for minecraft:block mod id endgameplus
+// 1.20.1	2023-09-17T21:27:50.540515	Tags for minecraft:block mod id endgameplus
+6651b33eaea4ffa8a0901da7f8be8561e083703a data/endgameplus/tags/blocks/lavender_logs.json
 de84fbf8e8aacd48324dfb1935c3d1ff46eadf33 data/endgameplus/tags/blocks/metal_detector_valuables.json
+05fde7c59612be8bfad4a4674f57d0acf1448134 data/minecraft/tags/blocks/fence_gates.json
+910d65eb80cd8d7de0c744462fac5e690b336c7f data/minecraft/tags/blocks/leaves.json
+a8e02996e60217ae966c7c0c36d29ac682035bd9 data/minecraft/tags/blocks/logs_that_burn.json
+7461b3b109bad7697545aefff91b0075bafba025 data/minecraft/tags/blocks/mineable/axe.json
+910d65eb80cd8d7de0c744462fac5e690b336c7f data/minecraft/tags/blocks/mineable/hoe.json
 03509397050082bc848345746c1af2aac8465bf1 data/minecraft/tags/blocks/mineable/pickaxe.json
 9c3bd833d40639849a7ee2b4dc578db600c6338a data/minecraft/tags/blocks/needs_diamond_tool.json
 dd297e0c2140895bf9edb276505fe1879a13c7f9 data/minecraft/tags/blocks/needs_iron_tool.json
+6c0f1b81d8eefa4cb3ff707c79181f65a0dcf27d data/minecraft/tags/blocks/planks.json
+90a92faa975235cda89fc6e9a79d03eba032632a data/minecraft/tags/blocks/saplings.json
+ae96e93a22e19efe6e68b50ec16ab0d386d68091 data/minecraft/tags/blocks/wooden_buttons.json
+4c04049ae5eedab88c3247745a947bd77b1eac52 data/minecraft/tags/blocks/wooden_doors.json
+5b3d41e79e3b5293d37ccee1a0a90d0f82d60a72 data/minecraft/tags/blocks/wooden_fences.json
+d98a608003fcd6a674a3848e61d3a0975a334394 data/minecraft/tags/blocks/wooden_pressure_plates.json
+6c6040624fcbe583b07765f2c113e330370926fe data/minecraft/tags/blocks/wooden_slabs.json
+4d7e144394abe683b26d4b770c152f85ca0e93b5 data/minecraft/tags/blocks/wooden_stairs.json
+99fde0ec675f92deb09cd7c5eb29e435c870b1a6 data/minecraft/tags/blocks/wooden_trapdoors.json

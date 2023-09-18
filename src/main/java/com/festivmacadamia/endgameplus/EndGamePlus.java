@@ -37,6 +37,7 @@ public class EndGamePlus{
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
         GeckoLib.initialize();
+
  
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

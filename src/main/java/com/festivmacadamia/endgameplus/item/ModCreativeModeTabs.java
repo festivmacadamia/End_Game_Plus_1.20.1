@@ -24,10 +24,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ENDERITE_SCRAP.get());
                         pOutput.accept(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get());
 
-                        pOutput.accept(ModItems.GOLDEN_STEAK.get());
-
-                        pOutput.accept(ModItems.METAL_DETECTOR.get());
-
                         pOutput.accept(ModItems.ENDERITE_AXE.get());
                         pOutput.accept(ModItems.ENDERITE_HOE.get());
                         pOutput.accept(ModItems.ENDERITE_PICKAXE.get());
@@ -42,6 +38,28 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ENDERITE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_ENDERITE.get());
                         pOutput.accept(ModBlocks.END_DIAMOND_ORE.get());
+
+                        pOutput.accept(ModItems.GOLDEN_STEAK.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+
+                        pOutput.accept(ModBlocks.LAVENDER_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_LAVENDER_LOG.get());
+                        pOutput.accept(ModBlocks.LAVENDER_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_LAVENDER_WOOD.get());
+                        pOutput.accept(ModBlocks.LAVENDER_PLANKS.get());
+                        pOutput.accept(ModBlocks.LAVENDER_LEAVES.get());
+                        pOutput.accept(ModBlocks.LAVENDER_SAPLING.get());
+
+                        pOutput.accept(ModBlocks.LAVENDER_STAIRS.get());
+                        pOutput.accept(ModBlocks.LAVENDER_SLAB.get());
+                        pOutput.accept(ModBlocks.LAVENDER_BUTTON.get());
+                        pOutput.accept(ModBlocks.LAVENDER_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.LAVENDER_FENCE.get());
+                        pOutput.accept(ModBlocks.LAVENDER_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.LAVENDER_DOOR.get());
+                        pOutput.accept(ModBlocks.LAVENDER_TRAPDOOR.get());
 
                         pOutput.accept(ModItems.MUNCHER_SPAWN_EGG.get());
                         pOutput.accept(ModItems.CAPYBARA_SPAWN_EGG.get());

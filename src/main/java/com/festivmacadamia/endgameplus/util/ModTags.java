@@ -13,6 +13,7 @@ public class ModTags {
     public static class Blocks{
 
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
+        public static final TagKey<Block> LAVENDER_LOGS = tag("lavender_logs");
         public static final TagKey<Block> NEEDS_INTERDIMENSIONAL_TOOL = tag("needs_interdimensional_tool");
 
 
@@ -23,12 +24,9 @@ public class ModTags {
     }
     public static class Items{
 
-
+        public static final TagKey<Item> LAVENDER_LOGS_ITEM = tag("lavender_logs_item");
         private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(EndGamePlus.MOD_ID, name));
         }
-
     }
-
-    
 }

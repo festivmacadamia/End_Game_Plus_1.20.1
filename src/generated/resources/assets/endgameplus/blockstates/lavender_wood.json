@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "endgameplus:block/lavender_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "endgameplus:block/lavender_wood"
+    },
+    "axis=z": {
+      "model": "endgameplus:block/lavender_wood_horizontal",
+      "x": 90
+    }
+  }
+}

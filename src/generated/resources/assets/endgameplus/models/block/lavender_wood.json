@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "endgameplus:block/lavender_log",
+    "side": "endgameplus:block/lavender_log"
+  }
+}

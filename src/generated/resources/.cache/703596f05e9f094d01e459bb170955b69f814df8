@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-16T16:25:50.41845	Item Models: endgameplus
+// 1.20.1	2023-09-17T21:40:29.423271	Item Models: endgameplus
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/capybara_spawn_egg.json
 158c6a2d1fe405fff3d37ab4bb7f93ab5bcd84cf assets/endgameplus/models/item/enderite_axe.json
 f3b95f6813724542228edaf80fda738673a87803 assets/endgameplus/models/item/enderite_boots.json
@@ -53,5 +53,15 @@ b81dea21cec56a6d974cbc499ec14c73740065ff assets/endgameplus/models/item/enderite
 1a4e08d37d4d95ea12e6f195c5a10d8aec5596e5 assets/endgameplus/models/item/enderite_sword.json
 21ac4d0f778d924c6188fcf52b2fc7021ab78aff assets/endgameplus/models/item/enderite_upgrade_smithing_template.json
 0b387a1012297713002c5d857cc3dc3820681e86 assets/endgameplus/models/item/golden_steak.json
+6dc47400bfd845a69f2b797dd5b007b6321560f2 assets/endgameplus/models/item/lavender_button.json
+c1c5bd71a25d26dfb84ff1262f8ec88ac782d613 assets/endgameplus/models/item/lavender_door.json
+4591febc75450b606a6e126ad56b3683a9173dc9 assets/endgameplus/models/item/lavender_fence.json
+664df49a8e83adc815a92dfb04eaa3f7a977fc54 assets/endgameplus/models/item/lavender_fence_gate.json
+a4f90744527880d09074640a5394617ad01d551b assets/endgameplus/models/item/lavender_pressure_plate.json
+bd1f17c1efe3b7f2a238f5eeacdf3976ed5e2edb assets/endgameplus/models/item/lavender_sapling.json
+417bda09583d4faed3a37c9dfe12e559f7dcfef5 assets/endgameplus/models/item/lavender_slab.json
+08b827f3526dd310b51afb63300b16759fc57eaf assets/endgameplus/models/item/lavender_stairs.json
+f7219f3685202f204c4fd9fe13c3682c01a0bdeb assets/endgameplus/models/item/lavender_trapdoor.json
 3184daff4550d3763ad94b41ebf210f03aca8e9a assets/endgameplus/models/item/metal_detector.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/muncher_spawn_egg.json
+48da6c6d21996a1bc17bdd051966129e3086b937 assets/endgameplus/models/item/strawberry.json

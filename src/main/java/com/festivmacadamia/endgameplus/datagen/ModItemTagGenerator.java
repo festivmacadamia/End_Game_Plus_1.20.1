@@ -1,8 +1,10 @@
 package com.festivmacadamia.endgameplus.datagen;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
+import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.item.ModItems;
 
+import com.festivmacadamia.endgameplus.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -24,5 +26,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.TRIMMABLE_ARMOR)
             .add(ModItems.ENDERITE_HELMET.get(),ModItems.ENDERITE_CHESTPLATE.get(),
                 ModItems.ENDERITE_LEGGINGS.get(),ModItems.ENDERITE_BOOTS.get());
+
+        this.tag(ModTags.Items.LAVENDER_LOGS_ITEM)
+                .add(ModBlocks.LAVENDER_LOG.get().asItem(),
+                        ModBlocks.STRIPPED_LAVENDER_LOG.get().asItem(),
+                        ModBlocks.LAVENDER_WOOD.get().asItem(),
+                        ModBlocks.STRIPPED_LAVENDER_WOOD.get().asItem());
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .addTags(ModTags.Items.LAVENDER_LOGS_ITEM);
+        this.tag(ItemTags.LOGS)
+                .addTags(ModTags.Items.LAVENDER_LOGS_ITEM);
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.LAVENDER_PLANKS.get().asItem());
     }
 }
