@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "endgameplus:lavender_planks"
+    }
+  ],
+  "result": {
+    "item": "endgameplus:lavender_button"
+  }
+}

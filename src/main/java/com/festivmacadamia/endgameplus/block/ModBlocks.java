@@ -22,7 +22,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.antlr.v4.parse.BlockSetTransformer;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = 
@@ -49,7 +48,7 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> LAVENDER_PLANKS = registerBlock("lavender_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -84,9 +83,35 @@ public class ModBlocks {
             () -> new SaplingBlock(new LavenderTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> LAVENDER_STAIRS = registerBlock("lavender_stairs",
-            () -> new StairBlock(() -> ModBlocks.LAVENDER_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+            () -> new StairBlock(() -> ModBlocks.LAVENDER_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
     public static final RegistryObject<Block> LAVENDER_SLAB = registerBlock("lavender_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
 
     public static final RegistryObject<Block> LAVENDER_BUTTON = registerBlock("lavender_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
@@ -96,9 +121,35 @@ public class ModBlocks {
                     BlockSetType.OAK));
 
     public static final RegistryObject<Block> LAVENDER_FENCE = registerBlock("lavender_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
     public static final RegistryObject<Block> LAVENDER_FENCE_GATE = registerBlock("lavender_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN,SoundEvents.FENCE_GATE_CLOSE));
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN,SoundEvents.FENCE_GATE_CLOSE){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+            });
 
     public static final RegistryObject<Block> LAVENDER_DOOR = registerBlock("lavender_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(), BlockSetType.OAK));

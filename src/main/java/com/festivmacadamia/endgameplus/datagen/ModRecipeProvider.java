@@ -47,7 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .unlockedBy(getHasName(ModItems.ENDERITE_INGOT.get()), has(ModItems.ENDERITE_INGOT.get()))
             .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLDEN_STEAK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.GOLDEN_STEAK.get())
             .pattern("SSS")
             .pattern("SDS")
             .pattern("SSS")
@@ -56,7 +56,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
             .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.METAL_DETECTOR.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METAL_DETECTOR.get())
             .pattern("  S")
             .pattern(" D ")
             .pattern("F  ")
@@ -87,7 +87,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         enderiteSmithing(pWriter, Items.DIAMOND_SHOVEL, RecipeCategory.TOOLS, ModItems.ENDERITE_SHOVEL.get());
 
         planksFromLog(pWriter,ModBlocks.LAVENDER_PLANKS.get().asItem(), ModTags.Items.LAVENDER_LOGS_ITEM,4);
-        
+        woodFromLogs(pWriter,ModBlocks.LAVENDER_WOOD.get(),ModBlocks.LAVENDER_LOG.get());
+        woodFromLogs(pWriter,ModBlocks.STRIPPED_LAVENDER_WOOD.get(),ModBlocks.STRIPPED_LAVENDER_LOG.get());
+
+        stairBuilder(pWriter, ModBlocks.LAVENDER_STAIRS.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        slabBuilder(pWriter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAVENDER_SLAB.get(), Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        buttonBuilder(pWriter, ModBlocks.LAVENDER_BUTTON.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        pressurePlateBuilder(pWriter, RecipeCategory.REDSTONE, ModBlocks.LAVENDER_PRESSURE_PLATE.get(), Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        fenceBuilder(pWriter, ModBlocks.LAVENDER_FENCE.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        fenceGateBuilder(pWriter, ModBlocks.LAVENDER_FENCE_GATE.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        doorBuilder(pWriter, ModBlocks.LAVENDER_DOOR.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+        trapdoorBuilder(pWriter, ModBlocks.LAVENDER_TRAPDOOR.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
+
+        //stairBuilder(Blocks.SANDSTONE_STAIRS, Ingredient.of(Blocks.SANDSTONE, Blocks.CHISELED_SANDSTONE, Blocks.CUT_SANDSTONE)).unlockedBy("has_sandstone", has(Blocks.SANDSTONE)).unlockedBy("has_chiseled_sandstone", has(Blocks.CHISELED_SANDSTONE)).unlockedBy("has_cut_sandstone", has(Blocks.CUT_SANDSTONE)).save(p_250804_);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> p_250172_, RecipeCategory p_250588_, ItemLike p_251868_, float p_250789_, int p_252144_, String p_251687_) {
@@ -111,5 +123,45 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected static void planksFromLog(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pPlanks, TagKey<Item> pLogs, int pResultCount) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pPlanks, pResultCount).requires(pLogs).group("planks").unlockedBy("has_log", has(pLogs)).save(pFinishedRecipeConsumer);
     }
+    protected static void woodFromLogs(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pWood, ItemLike pLog) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pWood, 3).define('#', pLog).pattern("##").pattern("##").group("bark").unlockedBy("has_log", has(pLog)).save(pFinishedRecipeConsumer);
+    }
 
+    protected static void stairBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pStairs, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pStairs, 4).define('#', pMaterial).pattern("#  ").pattern("## ").pattern("###")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+    protected static void slabBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeCategory pCategory, ItemLike pSlab, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(pCategory, pSlab, 6).define('#', pMaterial).pattern("###")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+
+    protected static void buttonBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pButton, Ingredient pMaterial) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, pButton).requires(pMaterial)
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+    protected static void pressurePlateBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeCategory pCategory, ItemLike pPressurePlate, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(pCategory, pPressurePlate,1).define('#', pMaterial).pattern("##")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+
+    protected static void fenceBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pFence, Ingredient pMaterial) {
+        int i = pFence == Blocks.NETHER_BRICK_FENCE ? 6 : 3;
+        Item item = pFence == Blocks.NETHER_BRICK_FENCE ? Items.NETHER_BRICK : Items.STICK;
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, pFence, i).define('W', pMaterial).define('#', item).pattern("W#W").pattern("W#W")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+    protected static void fenceGateBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pFenceGate, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, pFenceGate).define('#', Items.STICK).define('W', pMaterial).pattern("#W#").pattern("#W#")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+
+    protected static void doorBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pDoor, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, pDoor, 3).define('#', pMaterial).pattern("##").pattern("##").pattern("##")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
+    protected static void trapdoorBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ItemLike pTrapdoor, Ingredient pMaterial) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, pTrapdoor, 2).define('#', pMaterial).pattern("###").pattern("###")
+                .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
+    }
 }
