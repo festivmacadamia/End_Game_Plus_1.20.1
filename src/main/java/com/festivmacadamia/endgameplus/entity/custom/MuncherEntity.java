@@ -2,6 +2,7 @@ package com.festivmacadamia.endgameplus.entity.custom;
 
 import com.festivmacadamia.endgameplus.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -45,9 +46,14 @@ public class MuncherEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        if(this.level().getDifficulty() != Difficulty.PEACEFUL) {
+            this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));}
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, CapybaraEntity.class, true));
+    }
 
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return false;
     }
 
     @Nullable

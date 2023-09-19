@@ -20,8 +20,8 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        /*
 
+        /*
         //random drops from block
         add("CHOOSENAME", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.CHOOSEBLOCK).build(),
@@ -48,12 +48,17 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         //guaranteed drop from chest
         add("CHOOSENAME", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/CHOOSECHEST")).build() }, ModItems.CHOOSEITEM.get()));
-
         */
 
+        add("amaranth_seed_from_tall_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.AMARANTH_SEEDS.get()));
         add("enderite_smithing_template_from_end_city_chest", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/end_city_treasure")).build(),
-                LootItemRandomChanceCondition.randomChance(0.45f).build()}, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()));
+                LootItemRandomChanceCondition.randomChance(0.25f).build()}, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()));
+        add("raw_enderite_from_end_city_chest", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.33f).build()}, ModBlocks.RAW_ENDERITE.get().asItem()));
         add("enderite_ingot_from_end_city_chest", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/end_city_treasure")).build(),
                 LootItemRandomChanceCondition.randomChance(0.25f).build() }, ModItems.ENDERITE_SCRAP.get()));
