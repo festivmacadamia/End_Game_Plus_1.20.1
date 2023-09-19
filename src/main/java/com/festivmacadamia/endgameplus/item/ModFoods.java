@@ -9,4 +9,8 @@ public class ModFoods {
         .nutrition(8).saturationMod(1.2f).build();
     public static final FoodProperties STRAWBERRY = new FoodProperties.Builder()
             .nutrition(3).saturationMod(0.15f).build();
+    public static final FoodProperties STRAWBERRY_PIE = new FoodProperties.Builder()
+            .nutrition(8).saturationMod(0.45f).build();
+    public static final FoodProperties POPPED_AMARANTH = new FoodProperties.Builder()
+            .nutrition(2).saturationMod(0.1f).build();
 }

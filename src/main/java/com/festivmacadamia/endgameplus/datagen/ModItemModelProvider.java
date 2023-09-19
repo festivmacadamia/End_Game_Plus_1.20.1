@@ -50,6 +50,8 @@ public class ModItemModelProvider extends ItemModelProvider{
         simpleItem(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE);
 
         simpleItem(ModItems.GOLDEN_STEAK);
+        simpleItem(ModItems.STRAWBERRY_PIE);
+        simpleItem(ModItems.POPPED_AMARANTH);
         simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.AMARANTH);

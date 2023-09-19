@@ -40,6 +40,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.END_DIAMOND_ORE.get());
 
                         pOutput.accept(ModItems.GOLDEN_STEAK.get());
+                        pOutput.accept(ModItems.POPPED_AMARANTH.get());
+                        pOutput.accept(ModItems.STRAWBERRY_PIE.get());
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                         pOutput.accept(ModItems.AMARANTH.get());

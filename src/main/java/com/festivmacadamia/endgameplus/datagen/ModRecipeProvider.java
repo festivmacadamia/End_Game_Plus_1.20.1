@@ -14,11 +14,10 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -65,7 +64,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .define('F', ModItems.ENDERITE_INGOT.get())
             .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
             .save(pWriter);
-
+        /*
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get(),2)
                 .pattern("SDS")
                 .pattern("SFS")
@@ -75,7 +74,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', Blocks.END_STONE)
                 .unlockedBy(getHasName(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), has(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()))
                 .save(pWriter);
-
+        */
+        copySmithingTemplate(pWriter, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get(), Blocks.END_STONE);
         enderiteSmithing(pWriter, Items.DIAMOND_CHESTPLATE, RecipeCategory.COMBAT, ModItems.ENDERITE_CHESTPLATE.get());
         enderiteSmithing(pWriter, Items.DIAMOND_LEGGINGS, RecipeCategory.COMBAT, ModItems.ENDERITE_LEGGINGS.get());
         enderiteSmithing(pWriter, Items.DIAMOND_HELMET, RecipeCategory.COMBAT, ModItems.ENDERITE_HELMET.get());
@@ -99,8 +99,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         doorBuilder(pWriter, ModBlocks.LAVENDER_DOOR.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
         trapdoorBuilder(pWriter, ModBlocks.LAVENDER_TRAPDOOR.get(),Ingredient.of(ModBlocks.LAVENDER_PLANKS.get()));
 
-        //stairBuilder(Blocks.SANDSTONE_STAIRS, Ingredient.of(Blocks.SANDSTONE, Blocks.CHISELED_SANDSTONE, Blocks.CUT_SANDSTONE)).unlockedBy("has_sandstone", has(Blocks.SANDSTONE)).unlockedBy("has_chiseled_sandstone", has(Blocks.CHISELED_SANDSTONE)).unlockedBy("has_cut_sandstone", has(Blocks.CUT_SANDSTONE)).save(p_250804_);
+        pieBuilder(pWriter, ModItems.STRAWBERRY_PIE.get(), ModItems.STRAWBERRY.get(), 1);
+
     }
+
 
     protected static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> p_250172_, RecipeCategory p_250588_, ItemLike p_251868_, float p_250789_, int p_252144_, String p_251687_) {
         oreCooking(p_250654_, RecipeSerializer.SMELTING_RECIPE, p_250172_, p_250588_, p_251868_, p_250789_, p_252144_, p_251687_, "_from_smelting");
@@ -118,7 +120,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static void enderiteSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), Ingredient.of(pIngredientItem), Ingredient.of(ModItems.ENDERITE_INGOT.get()), pCategory, pResultItem).unlocks("has_enderite_ingot", has(ModItems.ENDERITE_INGOT.get())).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
-     }
+    }
 
     protected static void planksFromLog(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pPlanks, TagKey<Item> pLogs, int pResultCount) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pPlanks, pResultCount).requires(pLogs).group("planks").unlockedBy("has_log", has(pLogs)).save(pFinishedRecipeConsumer);
@@ -164,4 +166,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, pTrapdoor, 2).define('#', pMaterial).pattern("###").pattern("###")
                 .unlockedBy("has_lavender_plank", has(ModBlocks.LAVENDER_PLANKS.get())).save(pFinishedRecipeConsumer);
     }
+
+    protected static void pieBuilder(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pPie, Item pFruit, int pResultCount) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, pPie, pResultCount).requires(pFruit).requires(Items.WHEAT).requires(Items.EGG).group("pie").unlockedBy("has_strawberry", has(pFruit)).save(pFinishedRecipeConsumer);
+    }
+
+
 }

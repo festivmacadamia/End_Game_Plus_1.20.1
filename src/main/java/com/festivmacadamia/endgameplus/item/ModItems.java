@@ -30,7 +30,10 @@ public class ModItems {
     //food
     public static final RegistryObject<Item> GOLDEN_STEAK = ITEMS.register("golden_steak", 
         ()  -> new Item(new Item.Properties().food(ModFoods.GOLDEN_STEAK)));
-
+    public static final RegistryObject<Item> POPPED_AMARANTH = ITEMS.register("popped_amaranth",
+            ()  -> new Item(new Item.Properties().food(ModFoods.POPPED_AMARANTH)));
+    public static final RegistryObject<Item> STRAWBERRY_PIE = ITEMS.register("strawberry_pie",
+            ()  -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY_PIE)));
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             ()  -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",

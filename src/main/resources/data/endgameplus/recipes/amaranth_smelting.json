@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "endgameplus:amaranth"
+  },
+  "result": "endgameplus:popped_amaranth",
+  "experience": 0.35,
+  "cookingtime": 200
+}
