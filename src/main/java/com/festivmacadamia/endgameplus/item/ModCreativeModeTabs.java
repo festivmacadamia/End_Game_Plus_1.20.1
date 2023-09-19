@@ -41,6 +41,9 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.GOLDEN_STEAK.get());
                         pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+                        pOutput.accept(ModItems.AMARANTH.get());
+                        pOutput.accept(ModItems.AMARANTH_SEEDS.get());
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 

@@ -1,6 +1,7 @@
 package com.festivmacadamia.endgameplus.item;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
+import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.entity.ModEntities;
 import com.festivmacadamia.endgameplus.item.custom.MetalDetectorItem;
 import com.festivmacadamia.endgameplus.item.custom.ModArmorItem;
@@ -32,6 +33,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             ()  -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            ()  -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AMARANTH = ITEMS.register("amaranth", 
+            ()  -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> AMARANTH_SEEDS = ITEMS.register("amaranth_seeds",
+            ()  -> new ItemNameBlockItem(ModBlocks.AMARANTH_CROP.get(), new Item.Properties()));
 
     //special items
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", 

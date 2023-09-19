@@ -51,6 +51,9 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         simpleItem(ModItems.GOLDEN_STEAK);
         simpleItem(ModItems.STRAWBERRY);
+        simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(ModItems.AMARANTH);
+        simpleItem(ModItems.AMARANTH_SEEDS);
 
         spawnEggItem(ModItems.MUNCHER_SPAWN_EGG);
         spawnEggItem(ModItems.CAPYBARA_SPAWN_EGG);

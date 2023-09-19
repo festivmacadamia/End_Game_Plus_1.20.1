@@ -3,7 +3,9 @@ package com.festivmacadamia.endgameplus.block;
 import java.util.function.Supplier;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
+import com.festivmacadamia.endgameplus.block.custom.AmaranthCropBlock;
 import com.festivmacadamia.endgameplus.block.custom.ModFlammableRotatedPillarBlock;
+import com.festivmacadamia.endgameplus.block.custom.StrawberryCropBlock;
 import com.festivmacadamia.endgameplus.item.ModItems;
 
 import com.festivmacadamia.endgameplus.worldgen.tree.LavenderTreeGrower;
@@ -155,6 +157,11 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> LAVENDER_TRAPDOOR = registerBlock("lavender_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> AMARANTH_CROP = BLOCKS.register("amaranth_crop",
+            () -> new AmaranthCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

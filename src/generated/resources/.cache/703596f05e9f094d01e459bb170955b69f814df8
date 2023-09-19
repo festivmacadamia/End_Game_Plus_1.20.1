@@ -1,4 +1,6 @@
-// 1.20.1	2023-09-17T21:40:29.423271	Item Models: endgameplus
+// 1.20.1	2023-09-18T22:57:57.937523	Item Models: endgameplus
+e17b7d51ff4bde27aaaea93104e5acd810cd0ea0 assets/endgameplus/models/item/amaranth.json
+590040c41fcca9a7372f263318c3fce69992d28f assets/endgameplus/models/item/amaranth_seeds.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/capybara_spawn_egg.json
 158c6a2d1fe405fff3d37ab4bb7f93ab5bcd84cf assets/endgameplus/models/item/enderite_axe.json
 f3b95f6813724542228edaf80fda738673a87803 assets/endgameplus/models/item/enderite_boots.json
@@ -65,3 +67,4 @@ f7219f3685202f204c4fd9fe13c3682c01a0bdeb assets/endgameplus/models/item/lavender
 3184daff4550d3763ad94b41ebf210f03aca8e9a assets/endgameplus/models/item/metal_detector.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/muncher_spawn_egg.json
 48da6c6d21996a1bc17bdd051966129e3086b937 assets/endgameplus/models/item/strawberry.json
+e6990a5cd7be04cd522dfd50a49a54448bc7c6cf assets/endgameplus/models/item/strawberry_seeds.json
