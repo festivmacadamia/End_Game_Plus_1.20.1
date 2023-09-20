@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -162,6 +163,26 @@ public class ModBlocks {
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> AMARANTH_CROP = BLOCKS.register("amaranth_crop",
             () -> new AmaranthCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> PINK_ORCHID = registerBlock("pink_orchid",
+            () -> new FlowerBlock(() -> MobEffects.REGENERATION, 5, BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_PINK_ORCHID = BLOCKS.register("potted_pink_orchid",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ModBlocks.PINK_ORCHID,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
+    public static final RegistryObject<Block> WILD_STRAWBERRY = registerBlock("wild_strawberry",
+            () -> new FlowerBlock(() -> MobEffects.POISON, 5, BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CATMINT = registerBlock("catmint",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5, BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ModBlocks.CATMINT,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
+
+    public static final RegistryObject<Block> AZURRI_BLUE_SATIN = registerBlock("azuri_blue_satin",
+            () -> new FlowerBlock(() -> MobEffects.NIGHT_VISION, 5, BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_AZURI_BLUE_SATIN = BLOCKS.register("potted_azuri_blue_satin",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock)Blocks.FLOWER_POT, ModBlocks.AZURRI_BLUE_SATIN,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

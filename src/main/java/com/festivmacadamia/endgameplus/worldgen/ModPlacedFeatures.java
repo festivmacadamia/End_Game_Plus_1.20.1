@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, LAVENDER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LAVENDER_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.LAVENDER_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.01f, 1), ModBlocks.LAVENDER_SAPLING.get()));
     }
 
 

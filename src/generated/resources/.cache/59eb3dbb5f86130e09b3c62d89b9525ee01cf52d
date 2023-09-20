@@ -1,5 +1,7 @@
-// 1.20.1	2023-09-19T10:33:47.795549	Loot Tables
+// 1.20.1	2023-09-20T13:07:40.463693	Loot Tables
 693f1a78dd43473ff2d11f92dfef26a91a1dbea6 data/endgameplus/loot_tables/blocks/amaranth_crop.json
+b07c0f1848ac28455fb915f8e30fde3a3103ddcb data/endgameplus/loot_tables/blocks/azuri_blue_satin.json
+cc36cd79d04b8a5da5d2b0a8d4896d3944ea5668 data/endgameplus/loot_tables/blocks/catmint.json
 92d943c2c274d24b5c53e425793b23e1fe8770fa data/endgameplus/loot_tables/blocks/end_diamond_ore.json
 56324dce0b8cdbdfd4b846fe1e5869ede9f666d2 data/endgameplus/loot_tables/blocks/enderite_block.json
 196e31ec1b8e4cc403b4275124b951769fa1917e data/endgameplus/loot_tables/blocks/lavender_button.json
@@ -15,7 +17,12 @@ aeeb042f66175be2235688fc5095c413fc35f28d data/endgameplus/loot_tables/blocks/lav
 9db72be72c48fc1448d5a67161a9bb1b57a57d07 data/endgameplus/loot_tables/blocks/lavender_stairs.json
 f95f61ca972a994c56f28ec30ebf77c4cd8d8d77 data/endgameplus/loot_tables/blocks/lavender_trapdoor.json
 e80b4295958921eb60351db62802df91725e5eda data/endgameplus/loot_tables/blocks/lavender_wood.json
+5a04cab3862af8ba04a849db7a6585a5e843f9ec data/endgameplus/loot_tables/blocks/pink_orchid.json
+741ed3e523e39eb3f503ce835d107fe90067d7c5 data/endgameplus/loot_tables/blocks/potted_azuri_blue_satin.json
+1bf3323ec1772191d1e309b3dbec96258093248f data/endgameplus/loot_tables/blocks/potted_catmint.json
+3ca39e5c49f332001699408f2b6cf45582b9a4e2 data/endgameplus/loot_tables/blocks/potted_pink_orchid.json
 c03fe95fe03574a4e063016c0db7c8f7a773cbc7 data/endgameplus/loot_tables/blocks/raw_enderite.json
 c68fb3775af159fb595f3d28e8af9d6958a60994 data/endgameplus/loot_tables/blocks/strawberry_crop.json
 bfc79ff0aab4b39c14be53db76ac4237031a8569 data/endgameplus/loot_tables/blocks/stripped_lavender_log.json
 36e58850020ab4eca1be23cdbbf6513b55ccca09 data/endgameplus/loot_tables/blocks/stripped_lavender_wood.json
+0177c78f1e2386a7c79910582004ac59ab762890 data/endgameplus/loot_tables/blocks/wild_strawberry.json

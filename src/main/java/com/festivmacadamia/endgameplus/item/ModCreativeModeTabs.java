@@ -57,6 +57,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.LAVENDER_LEAVES.get());
                         pOutput.accept(ModBlocks.LAVENDER_SAPLING.get());
 
+                        pOutput.accept(ModBlocks.PINK_ORCHID.get());
+                        pOutput.accept(ModBlocks.WILD_STRAWBERRY.get());
+                        pOutput.accept(ModBlocks.CATMINT.get());
+                        pOutput.accept(ModBlocks.AZURRI_BLUE_SATIN.get());
+
                         pOutput.accept(ModBlocks.LAVENDER_STAIRS.get());
                         pOutput.accept(ModBlocks.LAVENDER_SLAB.get());
                         pOutput.accept(ModBlocks.LAVENDER_BUTTON.get());

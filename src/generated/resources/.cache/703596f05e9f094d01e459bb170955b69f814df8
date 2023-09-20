@@ -1,7 +1,9 @@
-// 1.20.1	2023-09-19T11:15:29.729716	Item Models: endgameplus
+// 1.20.1	2023-09-20T13:07:40.467029	Item Models: endgameplus
 e17b7d51ff4bde27aaaea93104e5acd810cd0ea0 assets/endgameplus/models/item/amaranth.json
 590040c41fcca9a7372f263318c3fce69992d28f assets/endgameplus/models/item/amaranth_seeds.json
+73d5ada0c2c46570237862c077f8bec96d540b38 assets/endgameplus/models/item/azuri_blue_satin.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/capybara_spawn_egg.json
+5812941f8ccd1f32b345593211666d0df3e80ccb assets/endgameplus/models/item/catmint.json
 158c6a2d1fe405fff3d37ab4bb7f93ab5bcd84cf assets/endgameplus/models/item/enderite_axe.json
 f3b95f6813724542228edaf80fda738673a87803 assets/endgameplus/models/item/enderite_boots.json
 6e7d3638f4b4e245ef8a3fa61a3fe5e1472f65bb assets/endgameplus/models/item/enderite_boots_amethyst_trim.json
@@ -66,7 +68,9 @@ bd1f17c1efe3b7f2a238f5eeacdf3976ed5e2edb assets/endgameplus/models/item/lavender
 f7219f3685202f204c4fd9fe13c3682c01a0bdeb assets/endgameplus/models/item/lavender_trapdoor.json
 3184daff4550d3763ad94b41ebf210f03aca8e9a assets/endgameplus/models/item/metal_detector.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/endgameplus/models/item/muncher_spawn_egg.json
+36c0305c83c2145e756ac8822dbb98cd4cb3fd1c assets/endgameplus/models/item/pink_orchid.json
 a32291aef28444c80aaf01b4f0524db0230f06de assets/endgameplus/models/item/popped_amaranth.json
 48da6c6d21996a1bc17bdd051966129e3086b937 assets/endgameplus/models/item/strawberry.json
 5febda95344fd8212990aed3fc36bca1f98b3003 assets/endgameplus/models/item/strawberry_pie.json
 e6990a5cd7be04cd522dfd50a49a54448bc7c6cf assets/endgameplus/models/item/strawberry_seeds.json
+2ff95418ee2207682389e0a4145b3879d238aa12 assets/endgameplus/models/item/wild_strawberry.json

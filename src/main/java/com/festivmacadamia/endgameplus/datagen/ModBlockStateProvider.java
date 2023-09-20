@@ -57,6 +57,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
         makeAmaranthCrop(((CropBlock) ModBlocks.AMARANTH_CROP.get()), "amaranth_stage", "amaranth_stage");
+
+        simpleBlockWithItem(ModBlocks.PINK_ORCHID.get(), models().cross(blockTexture(ModBlocks.PINK_ORCHID.get()).getPath(),
+                blockTexture(ModBlocks.PINK_ORCHID.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PINK_ORCHID.get(), models().singleTexture("potted_pink_orchid", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.PINK_ORCHID.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.WILD_STRAWBERRY.get(), models().cross(blockTexture(ModBlocks.WILD_STRAWBERRY.get()).getPath(),
+                blockTexture(ModBlocks.WILD_STRAWBERRY.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.CATMINT.get(), models().cross(blockTexture(ModBlocks.CATMINT.get()).getPath(),
+                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_CATMINT.get(), models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.AZURRI_BLUE_SATIN.get(), models().cross(blockTexture(ModBlocks.AZURRI_BLUE_SATIN.get()).getPath(),
+                blockTexture(ModBlocks.AZURRI_BLUE_SATIN.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_AZURI_BLUE_SATIN.get(), models().singleTexture("potted_azuri_blue_satin", new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.AZURRI_BLUE_SATIN.get())).renderType("cutout"));
     }
     
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

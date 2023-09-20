@@ -11,12 +11,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -78,6 +81,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.AMARANTH_CROP.get(), createCropDrops(ModBlocks.AMARANTH_CROP.get(), ModItems.AMARANTH.get(),
                 ModItems.AMARANTH_SEEDS.get(), lootitemcondition$builder2));
+
+        this.dropSelf(ModBlocks.PINK_ORCHID.get());
+        this.add(ModBlocks.POTTED_PINK_ORCHID.get(),createPotFlowerItemTable(ModBlocks.PINK_ORCHID.get()));
+
+        this.add(ModBlocks.WILD_STRAWBERRY.get(),(block) ->
+                createWildStrawberryDrops(block, ModItems.STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS.get()));
+
+        this.dropSelf(ModBlocks.CATMINT.get());
+        this.add(ModBlocks.POTTED_CATMINT.get(),createPotFlowerItemTable(ModBlocks.CATMINT.get()));
+
+        this.dropSelf(ModBlocks.AZURRI_BLUE_SATIN.get());
+        this.add(ModBlocks.POTTED_AZURI_BLUE_SATIN.get(),createPotFlowerItemTable(ModBlocks.AZURRI_BLUE_SATIN.get()));
     }
 
     protected LootTable.Builder createDiamondLikeOreDrops(Block pBlock, Item item) {
@@ -86,6 +101,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 1.0F)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    private static final LootItemCondition.Builder HAS_SHEARS_OR_SILK_TOUCH = HAS_SHEARS.or(HAS_SILK_TOUCH);
+    private static final LootItemCondition.Builder HAS_NO_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_OR_SILK_TOUCH.invert();
+    protected LootTable.Builder createWildStrawberryDrops(Block pBlock, Item pMain, Item pAux) {
+        return createSilkTouchOrShearsDispatchTable(pBlock, this.applyExplosionCondition(pBlock, LootItem.lootTableItem(pMain))
+                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 1.0f)))
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+                .when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionDecay(pBlock, LootItem.lootTableItem(pAux)
+                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F))))
+                .when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.5f))));
     }
 
     @Override

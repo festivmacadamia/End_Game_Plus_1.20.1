@@ -74,6 +74,10 @@ public class ModItemModelProvider extends ItemModelProvider{
         trimmedArmorItem(ModItems.ENDERITE_BOOTS);
 
         saplingItem(ModBlocks.LAVENDER_SAPLING);
+        saplingItem(ModBlocks.PINK_ORCHID);
+        saplingItem(ModBlocks.WILD_STRAWBERRY);
+        saplingItem(ModBlocks.CATMINT);
+        saplingItem(ModBlocks.AZURRI_BLUE_SATIN);
 
         evenSimplerBlockItem(ModBlocks.LAVENDER_STAIRS);
         evenSimplerBlockItem(ModBlocks.LAVENDER_SLAB);

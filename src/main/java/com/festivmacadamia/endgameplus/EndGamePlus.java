@@ -9,6 +9,8 @@ import com.festivmacadamia.endgameplus.item.ModItems;
 import com.festivmacadamia.endgameplus.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -45,7 +47,15 @@ public class EndGamePlus{
     }
 
     private void commonSetup(final FMLCommonSetupEvent event){
-
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ORCHID.getId(), ModBlocks.POTTED_PINK_ORCHID);
+        });
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
+        });
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.AZURRI_BLUE_SATIN.getId(), ModBlocks.POTTED_AZURI_BLUE_SATIN);
+        });
     }
 
     // Add the example block item to the building blocks tab
