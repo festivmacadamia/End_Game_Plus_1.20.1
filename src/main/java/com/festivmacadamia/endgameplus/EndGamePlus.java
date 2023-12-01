@@ -3,10 +3,12 @@ package com.festivmacadamia.endgameplus;
 import com.festivmacadamia.endgameplus.block.ModBlocks;
 import com.festivmacadamia.endgameplus.entity.ModEntities;
 import com.festivmacadamia.endgameplus.entity.client.CapybaraRenderer;
+import com.festivmacadamia.endgameplus.entity.client.HamisRenderer;
 import com.festivmacadamia.endgameplus.entity.client.MuncherRenderer;
 import com.festivmacadamia.endgameplus.item.ModCreativeModeTabs;
 import com.festivmacadamia.endgameplus.item.ModItems;
 import com.festivmacadamia.endgameplus.loot.ModLootModifiers;
+import com.festivmacadamia.endgameplus.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
@@ -38,6 +40,7 @@ public class EndGamePlus{
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
         GeckoLib.initialize();
 
  
@@ -76,6 +79,7 @@ public class EndGamePlus{
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.MUNCHER.get(), MuncherRenderer::new);
             EntityRenderers.register(ModEntities.CAPYBARA.get(), CapybaraRenderer::new);
+            EntityRenderers.register(ModEntities.HAMIS.get(), HamisRenderer::new);
         }
     }
 }

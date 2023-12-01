@@ -39,6 +39,10 @@
     "item.endgameplus.capybara_spawn_egg": "Capybara Spawn Egg",
     "entity.endgameplus.muncher": "Muncher",
     "item.endgameplus.muncher_spawn_egg": "Muncher Spawn Egg",
+    "entity.endgameplus.hamis": "Hämis",
+    "item.endgameplus.hamis_spawn_egg": "Hämis Spawn Egg",
+
+    "sounds.endgameplus.metal_detector_found_ore": "Metal Detector Noises",
 
     "block.endgameplus.lavender_log": "Lavender Log",
     "block.endgameplus.stripped_lavender_log": "Stripped Lavender Log",

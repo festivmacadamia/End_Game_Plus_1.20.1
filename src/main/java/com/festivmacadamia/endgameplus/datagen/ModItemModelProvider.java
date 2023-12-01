@@ -59,6 +59,7 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         spawnEggItem(ModItems.MUNCHER_SPAWN_EGG);
         spawnEggItem(ModItems.CAPYBARA_SPAWN_EGG);
+        spawnEggItem(ModItems.HAMIS_SPAWN_EGG);
         
         simpleItem(ModItems.METAL_DETECTOR);
 

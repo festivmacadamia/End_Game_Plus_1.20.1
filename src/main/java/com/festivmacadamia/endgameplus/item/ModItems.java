@@ -73,6 +73,8 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.MUNCHER, new ColorSwapper("#c7bb14").getMcColor(), new ColorSwapper("#4d1b05").getMcColor(), new Item.Properties()));
     public static final RegistryObject<ForgeSpawnEggItem> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.CAPYBARA, new ColorSwapper("#805332").getMcColor(), new ColorSwapper("#bf8f6b").getMcColor(), new Item.Properties()));
+    public static final RegistryObject<ForgeSpawnEggItem> HAMIS_SPAWN_EGG = ITEMS.register("hamis_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.HAMIS, new ColorSwapper("#5b17a3").getMcColor(), new ColorSwapper("#80db67").getMcColor(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

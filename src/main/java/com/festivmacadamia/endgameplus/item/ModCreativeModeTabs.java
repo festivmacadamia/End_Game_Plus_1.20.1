@@ -73,6 +73,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.MUNCHER_SPAWN_EGG.get());
                         pOutput.accept(ModItems.CAPYBARA_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.HAMIS_SPAWN_EGG.get());
                     })
                     .build());
 

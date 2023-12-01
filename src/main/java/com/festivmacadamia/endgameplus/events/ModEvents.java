@@ -3,6 +3,7 @@ package com.festivmacadamia.endgameplus.events;
 import com.festivmacadamia.endgameplus.EndGamePlus;
 import com.festivmacadamia.endgameplus.entity.ModEntities;
 import com.festivmacadamia.endgameplus.entity.custom.CapybaraEntity;
+import com.festivmacadamia.endgameplus.entity.custom.HamisEntity;
 import com.festivmacadamia.endgameplus.entity.custom.MuncherEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -16,5 +17,6 @@ public class ModEvents {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event){
         event.put(ModEntities.MUNCHER.get(), MuncherEntity.setAttributes());
         event.put(ModEntities.CAPYBARA.get(), CapybaraEntity.setAttributes());
+        event.put(ModEntities.HAMIS.get(), HamisEntity.setAttributes());
     }
 }

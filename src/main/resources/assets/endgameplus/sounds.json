@@ -1,0 +1,8 @@
+{
+  "metal_detector_found_ore": {
+    "subtitles": "sounds.endgameplus.metal_detector_found_ore",
+    "sounds": [
+      "endgameplus:metal_detector_found_ore"
+    ]
+  }
+}

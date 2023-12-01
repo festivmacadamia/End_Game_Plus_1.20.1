@@ -64,17 +64,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             .define('F', ModItems.ENDERITE_INGOT.get())
             .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
             .save(pWriter);
-        /*
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get(),2)
-                .pattern("SDS")
-                .pattern("SFS")
-                .pattern("SSS")
-                .define('S', Items.DIAMOND)
-                .define('D', ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get())
-                .define('F', Blocks.END_STONE)
-                .unlockedBy(getHasName(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()), has(ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get()))
-                .save(pWriter);
-        */
+
         copySmithingTemplate(pWriter, ModItems.ENDERITE_UPGRADE_SMITHING_TEMPLATE.get(), Blocks.END_STONE);
         enderiteSmithing(pWriter, Items.DIAMOND_CHESTPLATE, RecipeCategory.COMBAT, ModItems.ENDERITE_CHESTPLATE.get());
         enderiteSmithing(pWriter, Items.DIAMOND_LEGGINGS, RecipeCategory.COMBAT, ModItems.ENDERITE_LEGGINGS.get());
