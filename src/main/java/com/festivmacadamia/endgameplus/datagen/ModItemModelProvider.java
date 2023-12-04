@@ -62,6 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider{
         spawnEggItem(ModItems.HAMIS_SPAWN_EGG);
         
         simpleItem(ModItems.METAL_DETECTOR);
+        simpleItem(ModItems.AMONGUS_DRIP_DISC);
 
         handheldItem(ModItems.ENDERITE_SWORD);
         handheldItem(ModItems.ENDERITE_SHOVEL);

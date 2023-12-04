@@ -38,5 +38,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .addTags(ModTags.Items.LAVENDER_LOGS_ITEM);
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.LAVENDER_PLANKS.get().asItem());
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.AMONGUS_DRIP_DISC.get());
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.AMONGUS_DRIP_DISC.get());
     }
 }

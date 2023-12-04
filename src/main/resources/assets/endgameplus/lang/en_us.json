@@ -44,6 +44,9 @@
 
     "sounds.endgameplus.metal_detector_found_ore": "Metal Detector Noises",
 
+    "item.endgameplus.amongus_drip_disc": "Among Us Drip",
+    "item.endgameplus.amongus_drip_disc.desc": "Leonz - Among Us Drip",
+
     "block.endgameplus.lavender_log": "Lavender Log",
     "block.endgameplus.stripped_lavender_log": "Stripped Lavender Log",
     "block.endgameplus.lavender_wood": "Lavender Wood",

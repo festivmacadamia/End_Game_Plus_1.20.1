@@ -4,5 +4,13 @@
     "sounds": [
       "endgameplus:metal_detector_found_ore"
     ]
+  },
+  "amongus_drip": {
+    "sounds": [
+      {
+        "name": "endgameplus:amongus_drip",
+        "stream": true
+      }
+    ]
   }
 }

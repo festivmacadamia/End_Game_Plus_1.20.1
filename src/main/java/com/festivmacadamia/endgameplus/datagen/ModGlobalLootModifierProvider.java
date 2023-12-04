@@ -68,5 +68,8 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("metal_detector_from_mineshaft_chest", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/abandoned_mineshaft")).build(),
                 LootItemRandomChanceCondition.randomChance(0.014f).build() }, ModItems.METAL_DETECTOR.get()));
+        add("amongus_drip_disc_from_end_city_chest", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("chests/end_city_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.056f).build() }, ModItems.AMONGUS_DRIP_DISC.get()));
     }
 }

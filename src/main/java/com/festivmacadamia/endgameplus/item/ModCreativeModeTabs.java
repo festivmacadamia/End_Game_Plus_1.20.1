@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.AMARANTH_SEEDS.get());
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.AMONGUS_DRIP_DISC.get());
 
                         pOutput.accept(ModBlocks.LAVENDER_LOG.get());
                         pOutput.accept(ModBlocks.STRIPPED_LAVENDER_LOG.get());
