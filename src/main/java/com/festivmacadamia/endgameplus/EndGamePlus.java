@@ -8,7 +8,7 @@ import com.festivmacadamia.endgameplus.entity.client.MuncherRenderer;
 import com.festivmacadamia.endgameplus.item.ModCreativeModeTabs;
 import com.festivmacadamia.endgameplus.item.ModItems;
 import com.festivmacadamia.endgameplus.loot.ModLootModifiers;
-import com.festivmacadamia.endgameplus.sound.ModSounds;
+import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
@@ -40,7 +40,7 @@ public class EndGamePlus{
         ModBlocks.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
-        ModSounds.register(modEventBus);
+        ModSoundEvents.register(modEventBus);
         GeckoLib.initialize();
 
  

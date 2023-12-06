@@ -5,6 +5,12 @@
       "endgameplus:metal_detector_found_ore"
     ]
   },
+  "muncher_bite": {
+    "subtitles": "sounds.endgameplus.muncher_bite",
+    "sounds": [
+      "endgameplus:muncher_bite"
+    ]
+  },
   "amongus_drip": {
     "sounds": [
       {

@@ -1,6 +1,7 @@
 package com.festivmacadamia.endgameplus.entity.custom;
 
 import com.festivmacadamia.endgameplus.entity.ModEntities;
+import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
@@ -79,18 +80,24 @@ public class MuncherEntity extends Animal implements GeoEntity {
             return PlayState.CONTINUE;
         }
         tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.idle", Animation.LoopType.LOOP));
+        this.playSound(ModSoundEvents.MUNCHER_BITE.get());
         return PlayState.CONTINUE;
     }
 
     private <T extends GeoAnimatable> PlayState attackPredicate(AnimationState<T> tAnimationState) {
-        if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)){ //lpease
+        if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)){
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.attack", Animation.LoopType.PLAY_ONCE));
             tAnimationState.getController().forceAnimationReset();
             swinging=false;
+
+            this.playSound(ModSoundEvents.MUNCHER_BITE.get());
+
             return PlayState.CONTINUE;
         }
         return PlayState.CONTINUE;
     }
+
+
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

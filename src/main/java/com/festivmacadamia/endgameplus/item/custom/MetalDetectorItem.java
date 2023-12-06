@@ -1,7 +1,7 @@
 package com.festivmacadamia.endgameplus.item.custom;
 
 
-import com.festivmacadamia.endgameplus.sound.ModSounds;
+import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
@@ -53,7 +53,7 @@ public class MetalDetectorItem extends Item{
                     outputValuableCoordinates(positionClicked.below(i),player,state.getBlock());
                     foundBlock=true;
                     pContext.getLevel().playSeededSound(null, positionClicked.getX(), positionClicked.getY(), positionClicked.getZ(),
-                            ModSounds.METAL_DETECTOR_FOUND_ORE.get(), SoundSource.BLOCKS, 1f, 1f, 0);
+                            ModSoundEvents.METAL_DETECTOR_FOUND_ORE.get(), SoundSource.BLOCKS, 1f, 1f, 0);
                     break;
                 }
             }

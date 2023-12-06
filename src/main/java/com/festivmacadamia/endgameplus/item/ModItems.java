@@ -7,7 +7,7 @@ import com.festivmacadamia.endgameplus.item.custom.MetalDetectorItem;
 import com.festivmacadamia.endgameplus.item.custom.ModArmorItem;
 
 import com.festivmacadamia.endgameplus.item.custom.ModSmithingTemplateItem;
-import com.festivmacadamia.endgameplus.sound.ModSounds;
+import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
 import com.festivmacadamia.endgameplus.util.ColorSwapper;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -48,7 +48,7 @@ public class ModItems {
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", 
         ()  -> new MetalDetectorItem(new Item.Properties().durability(128)));
     public static final RegistryObject<Item> AMONGUS_DRIP_DISC = ITEMS.register("amongus_drip_disc",
-            ()  -> new RecordItem(6, ModSounds.AMONGUS_DRIP, new Item.Properties().stacksTo(1), 880));
+            ()  -> new RecordItem(6, ModSoundEvents.AMONGUS_DRIP, new Item.Properties().stacksTo(1), 880));
 
     //tools
     public static final RegistryObject<Item> ENDERITE_SWORD = ITEMS.register("enderite_sword", 

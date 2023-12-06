@@ -9,11 +9,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModSounds extends SoundEvents {
+public class ModSoundEvents extends SoundEvents {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, EndGamePlus.MOD_ID);
     public static final RegistryObject<SoundEvent> METAL_DETECTOR_FOUND_ORE = registerSoundEvents("metal_detector_found_ore");
     public static final RegistryObject<SoundEvent> AMONGUS_DRIP = registerSoundEvents("amongus_drip");
+
+    public static final RegistryObject<SoundEvent> MUNCHER_BITE = registerSoundEvents("muncher_bite");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
