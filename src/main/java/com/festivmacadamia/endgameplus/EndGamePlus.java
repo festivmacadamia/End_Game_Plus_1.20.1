@@ -9,6 +9,8 @@ import com.festivmacadamia.endgameplus.item.ModCreativeModeTabs;
 import com.festivmacadamia.endgameplus.item.ModItems;
 import com.festivmacadamia.endgameplus.loot.ModLootModifiers;
 import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
+import com.festivmacadamia.endgameplus.worldgen.biome.ModTerrablender;
+import com.festivmacadamia.endgameplus.worldgen.biome.surface.ModSurfaceRules;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
@@ -25,6 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
+import terrablender.api.SurfaceRuleManager;
 
 
 @Mod(EndGamePlus.MOD_ID)
@@ -41,6 +44,7 @@ public class EndGamePlus{
         ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
         ModSoundEvents.register(modEventBus);
+        ModTerrablender.registerBiomes();
         GeckoLib.initialize();
 
  
@@ -59,6 +63,7 @@ public class EndGamePlus{
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.AZURRI_BLUE_SATIN.getId(), ModBlocks.POTTED_AZURI_BLUE_SATIN);
         });
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
     }
 
     // Add the example block item to the building blocks tab
