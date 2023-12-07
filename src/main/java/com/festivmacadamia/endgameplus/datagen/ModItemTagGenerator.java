@@ -42,5 +42,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.AMONGUS_DRIP_DISC.get());
         this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(ModItems.AMONGUS_DRIP_DISC.get());
+
     }
 }

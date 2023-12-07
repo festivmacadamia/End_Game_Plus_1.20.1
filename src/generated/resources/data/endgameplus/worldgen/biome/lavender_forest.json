@@ -2,9 +2,9 @@
   "carvers": {},
   "downfall": 0.8,
   "effects": {
-    "fog_color": 2269670,
-    "foliage_color": 13763580,
-    "grass_color": 8324092,
+    "fog_color": 3681394,
+    "foliage_color": 12042950,
+    "grass_color": 12042950,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -17,16 +17,14 @@
       "replace_current_music": false,
       "sound": "endgameplus:amongus_drip"
     },
-    "sky_color": 3197208,
-    "water_color": 15216187,
-    "water_fog_color": 12524326
+    "sky_color": 15060212,
+    "water_color": 6049692,
+    "water_fog_color": 3681394
   },
   "features": [
     [],
     [],
-    [
-      "minecraft:forest_rock"
-    ],
+    [],
     [],
     [],
     [],
@@ -46,15 +44,13 @@
       "minecraft:ore_lapis",
       "minecraft:ore_lapis_buried",
       "minecraft:ore_copper",
-      "minecraft:underwater_magma",
-      "minecraft:ore_gold_extra"
+      "minecraft:underwater_magma"
     ],
     [],
     [],
     [
       "minecraft:forest_flowers",
       "minecraft:patch_large_fern",
-      "minecraft:trees_flower_forest",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",

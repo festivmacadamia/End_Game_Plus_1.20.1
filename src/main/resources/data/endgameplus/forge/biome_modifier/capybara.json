@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#minecraft:is_overworld",
+  "biomes": "endgameplus:lavender_forest",
   "spawners": {
     "type": "endgameplus:capybara",
     "weight": 25,

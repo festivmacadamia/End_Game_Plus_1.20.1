@@ -2,11 +2,14 @@ package com.festivmacadamia.endgameplus.util;
 
 import com.festivmacadamia.endgameplus.EndGamePlus;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
@@ -25,6 +28,14 @@ public class ModTags {
         public static final TagKey<Item> LAVENDER_LOGS_ITEM = tag("lavender_logs_item");
         private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(EndGamePlus.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes{
+
+        public static final TagKey<Biome> IS_LAVENDER = tag("is_lavender");
+        private static TagKey<Biome> tag(String name){
+            return TagKey.create(Registries.BIOME, new ResourceLocation(EndGamePlus.MOD_ID,name));
         }
     }
 }
