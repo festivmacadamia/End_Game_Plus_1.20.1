@@ -3,6 +3,7 @@ package com.festivmacadamia.endgameplus.entity.custom;
 import com.festivmacadamia.endgameplus.entity.ModEntities;
 import com.festivmacadamia.endgameplus.sound.ModSoundEvents;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -89,8 +90,8 @@ public class MuncherEntity extends Animal implements GeoEntity {
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.attack", Animation.LoopType.PLAY_ONCE));
             tAnimationState.getController().forceAnimationReset();
             swinging=false;
+            this.level().playLocalSound(this.getX(), this.getY(), this.getZ(), ModSoundEvents.MUNCHER_BITE.get(), this.getSoundSource(), 2.5F, 1.0F, false);
 
-            this.playSound(ModSoundEvents.MUNCHER_BITE.get());
 
             return PlayState.CONTINUE;
         }
