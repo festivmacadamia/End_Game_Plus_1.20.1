@@ -84,7 +84,7 @@ public class MuncherEntity extends Animal implements GeoEntity {
         this.playSound(ModSoundEvents.MUNCHER_BITE.get());
         return PlayState.CONTINUE;
     }
-
+    // oh yea
     private <T extends GeoAnimatable> PlayState attackPredicate(AnimationState<T> tAnimationState) {
         if(this.swinging && tAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)){
             tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.muncher.attack", Animation.LoopType.PLAY_ONCE));
